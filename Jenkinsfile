@@ -1,6 +1,6 @@
 node {
   stage 'Checkout Repository'
-  git url: 'https://github.com/stackroute-hybrid/NewsPackApp_soldiers_soldiers.git', branch: 'master'
+  git url: 'https://github.com/stackroute-hybrid/NewsPackApp_soldiers.git', branch: 'master'
 
   stage 'Installing  Dependencies'
   sh "(cd ~/jobs/stackroute-hybrid/jobs/NewsPackApp_soldiers/branches/master/workspace/client && npm install)"
@@ -13,7 +13,7 @@ node {
   sh "(cd ~/jobs/stackroute-hybrid/jobs/NewsPackApp_soldiers/branches/master/workspace/client && node node_modules/gulp/bin/gulp.js browserify)"
   sh "(cd ~/jobs/stackroute-hybrid/jobs/NewsPackApp_soldiers/branches/master/workspace/client && node node_modules/gulp/bin/gulp.js copy)"
 
-  
+
 
 
   stage 'Packaging for deployment'
